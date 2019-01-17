@@ -1,0 +1,7 @@
+<% @inquiry.each do |inquiry| %>
+名前:<%= inquiry.name%>
+内容:<%= inquiry.message %>
+メールアドレス:<%= inquiry.email %>
+<%= link_to "削除",url(:admin, :destroy, :id => inquiry.id), class: 'btn btn-default' %>
+<br>
+<% end %>

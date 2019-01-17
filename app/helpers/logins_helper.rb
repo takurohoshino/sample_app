@@ -1,0 +1,13 @@
+# Helper methods defined here can be accessed in any controller or view in the application
+
+module ContactApp
+  class App
+    module LoginsHelper
+      # def simple_helper_method
+      # ...
+      # end
+    end
+
+    helpers LoginsHelper
+  end
+end

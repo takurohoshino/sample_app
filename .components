@@ -1,0 +1,9 @@
+---
+:orm: activerecord
+:test: shoulda
+:mock: none
+:script: jquery
+:renderer: erb
+:stylesheet: sass
+:namespace: ContactApp
+:migration_format: number

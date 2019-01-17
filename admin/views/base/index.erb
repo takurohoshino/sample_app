@@ -1,0 +1,36 @@
+<div class="tabs-content">
+  <table id="list" class="table table-striped table-hover table-condensed">
+    <thead>
+      <tr>
+        <th class="header">
+          <%= mat(:account, :id) %></th>
+        <th class="header">
+          <%= mat(:account, :名前) %></th>
+        <th class="header">
+          <%= mat(:account, :本文) %></th>
+        <th class="header">
+          <%= mat(:account, :メールアドレス) %></th>
+        <th class="header list-row-action-header"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @inquiry.each do |inquiry| %>
+        <tr class="list-row">
+          <td class="list-column">
+            <%= inquiry.id %>
+          </td>
+          <td class="list-column">
+            <%= inquiry.name %>
+          </td>
+          <td class="list-column">
+            <%= inquiry.message %>
+          </td>
+          <td class="list-column">
+            <%= inquiry.email %>
+          </td>
+          <td class="list-column"><%= link_to "削除",url(:inquiry, :destroy, :id => inquiry.id), class: 'btn btn-default' %></tb>
+          <tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>

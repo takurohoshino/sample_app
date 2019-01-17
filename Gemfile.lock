@@ -35,6 +35,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
+    bcrypt (3.1.12)
     builder (3.2.3)
     concurrent-ruby (1.1.4)
     crass (1.0.4)
@@ -136,6 +137,8 @@ PLATFORMS
 DEPENDENCIES
   actionmailer
   activerecord (>= 3.1)
+  activesupport (>= 3.1)
+  bcrypt
   erubi (~> 1.6)
   mysql2
   padrino (= 0.14.4)

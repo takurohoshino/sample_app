@@ -8,6 +8,7 @@ ContactApp::App.controllers :posts do
     @inquiry = Inquiry.new(params[:inquiry])
     @inquiry.save
     SampleMailer.template_example(@inquiry).deliver
-    render 'posts/test'
+    flash[:hoge] = 'デモとしてflashを表示しています。'
+    redirect url(:posts, :index)
   end
 end

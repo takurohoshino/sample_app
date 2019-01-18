@@ -10,6 +10,8 @@
           <%= mat(:account, :本文) %></th>
         <th class="header">
           <%= mat(:account, :メールアドレス) %></th>
+        <th class="header">
+          <%= mat(:account, :ステータス) %></th>
         <th class="header list-row-action-header"></th>
       </tr>
     </thead>
@@ -28,9 +30,18 @@
           <td class="list-column">
             <%= inquiry.email %>
           </td>
-          <td class="list-column"><%= link_to "削除",url(:inquiry, :destroy, :id => inquiry.id), class: 'btn btn-default' %></tb>
-          <tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
+          <td class="list-column">
+            <% form_for inquiry, url(:inquiry,:update,:id => inquiry.id) do |f| %>
+              <%= f.select(:status, :options => ['未回答', '回答済み'],:selected => inquiry.status)%>
+              <%= f.submit '確認', class: 'btn btn-primary' %>
+            <% end %>
+          </td>
+          <td class="list-column">
+            <%= link_to "削除",url(:inquiry, :destroy, :id => inquiry.id), class: 'btn btn-default' %>
+
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

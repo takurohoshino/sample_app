@@ -4,6 +4,7 @@ class CreateInquiries < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :email
       t.string :message
+      t.string :status　, default: '未回答'
       t.timestamps null: false
     end
   end

@@ -13,6 +13,9 @@
   </head>
   <body>
     <% form_tag url(:sessions, :create), :class=>"login form-horizontal" do %>
+    <div class="login-header modal-header">
+        <div class="login-logo"> <%= image_tag("m_logo.png", :alt => "Padrino's logo", :height => 200, :width => 200) %> </div>
+      </div>
       <div class="login-body modal-body">
 
         <%= {:error => 'danger', :warning => 'warning', :success => 'success', :notice => 'info'}.map { |type, class_name| flash_tag(type, :class => "alert alert-#{class_name} fade in", :bootstrap => true) }.join.html_safe %>

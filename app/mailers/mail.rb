@@ -7,8 +7,8 @@ ActionMailer::Base.smtp_settings = {
   address: 'smtp.gmail.com',
   domain: 'gmail.com',
   port: 587,
-  user_name: 'hoshino@machiiro.jp',
-  password: 'rtrsphloknsquscs',
+  user_name: '*************',
+  password: '**************',
   authentication: 'plain',
   enable_starttls_auto: true
 }
@@ -17,7 +17,7 @@ class SampleMailer < ActionMailer::Base
   def template_example(inquiry)
     @inquiry = inquiry
     mail(
-      to: 'hoshino@machiiro.jp',
+      to: '***********',
       from: 'test@example.net',
       subject: 'test', &:text
     )
